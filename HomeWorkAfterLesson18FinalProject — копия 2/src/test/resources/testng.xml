@@ -1,0 +1,10 @@
+<suite name="Parameter test Suite" verbose="1">
+    <!--    <parameter name = "textFirst" value = "globalParam" /> -->
+    <test name = "Parameter Test one">
+        <classes>
+            <class name = "tests.testng.ListTitleTest">
+                <parameter name = "textListTitle" value = "Instagram" />
+            </class>
+        </classes>
+    </test>
+</suite>
