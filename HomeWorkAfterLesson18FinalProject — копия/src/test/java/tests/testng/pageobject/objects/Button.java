@@ -1,4 +1,4 @@
-package tests.testng.objects;
+package tests.testng.pageobject.objects;
 
 import org.openqa.selenium.WebElement;
 

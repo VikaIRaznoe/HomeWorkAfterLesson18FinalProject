@@ -1,4 +1,4 @@
-package tests.testng.utills;
+package tests.testng.pageobject.utills;
 
 import org.testng.annotations.DataProvider;
 

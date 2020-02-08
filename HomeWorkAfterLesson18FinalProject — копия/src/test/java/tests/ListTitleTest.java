@@ -7,7 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import tests.testng.pageobject.screen.ListTitleScreen;
-import tests.testng.utills.DataProviders;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
@@ -66,7 +66,7 @@ public class ListTitleTest {
     }
 
     //После нажатия на кнопку,появляется окно со списком,проверяем список на наличие нужных слов
-    @Test (dataProviderClass = tests.testng.utills.DataProviders.class, dataProvider = "dataProvider")
+    @Test (dataProviderClass = tests.testng.pageobject.utills.DataProviders.class, dataProvider = "dataProvider")
     public void findStrRefactTest(String data) {
 
         //Данные из файла listText
