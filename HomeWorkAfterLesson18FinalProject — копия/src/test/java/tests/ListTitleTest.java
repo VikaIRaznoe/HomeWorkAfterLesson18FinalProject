@@ -41,7 +41,7 @@ public class ListTitleTest {
         driver.quit();
     }
 
-    //Работает
+    //Проверяем кликабельность кнопки
     @Test
     public void listTitleMessageButtonsTest() throws InterruptedException {
         ListTitleScreen listTitleScreen = new ListTitleScreen(driver);
@@ -49,7 +49,7 @@ public class ListTitleTest {
         //listTitleScreen.getTextOfElement();
     }
 
-    //Проверяем наличие вопроса - Работает
+    //Проверяем наличие вопроса
     @Parameters("question")
     @Test
     public void listTitleMessageButtonsQuestionTest() throws InterruptedException {
@@ -58,26 +58,14 @@ public class ListTitleTest {
         Assert.assertEquals(listTitleScreen.getTextOfElement(),"Use Google's Location Services?");
     }
 
-    //Проверяем наличие,не работу, кнопки Disagree - Работает
+    //Проверяем наличие,не работу, кнопки Disagree
     @Test
     public void searchButtonTest(){
         ListTitleScreen listTitleScreen = new ListTitleScreen(driver);
         Assert.assertTrue(listTitleScreen.getButton(),"А где кнопка?");
     }
 
-    @Test (dataProviderClass = tests.testng.utills.DataProviders.class, dataProvider = "dataProvider")
-    public void findStrTest(String data) {
-
-        //Данные из файла listText
-        System.out.println(data);
-        String str = data;
-        List<String> stringList = Arrays.asList(str.split(","));
-        for (String strNew: stringList){
-            System.out.println(strNew);
-            //listTitleScreen.getTextPunktWindow();
-        }
-    }
-
+    //После нажатия на кнопку,появляется окно со списком,проверяем список на наличие нужных слов
     @Test (dataProviderClass = tests.testng.utills.DataProviders.class, dataProvider = "dataProvider")
     public void findStrRefactTest(String data) {
 

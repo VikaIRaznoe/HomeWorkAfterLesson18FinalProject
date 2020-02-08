@@ -31,10 +31,8 @@ public class ListTitleScreen implements Button {
 
     @Override
     public String getTextOfElement() {
-        //return null;
         WebElement questionWindow = waitForElementPresent(By.id("md_text_message"), 5);
         String questionText = questionWindow.getText();
-        System.out.println(questionText);
         return questionText;
     }
 
@@ -50,20 +48,17 @@ public class ListTitleScreen implements Button {
     }
 
     @Override
-    public void clickButton() throws InterruptedException {
+    public void clickButton(){
         scrollUp(20);
         WebElement listTitleMessageButtons = waitForElementPresent(By.xpath("//*[contains(@text,'LIST + TITLE + MESSAGE + BUTTONS')]"), 5);
         listTitleMessageButtons.click();
-        Thread.sleep(2000);
     }
 
     @Override
     public Boolean getButton() {
-        //return null;
         scrollUp(20);
         WebElement listTitleMessageButtons = waitForElementPresent(By.xpath("//*[contains(@text,'LIST + TITLE + MESSAGE + BUTTONS')]"), 5);
         listTitleMessageButtons.click();
-        // md_button_negative
         WebElement disagreeButton = waitForElementPresent(By.id("md_button_negative"), 5);
         Boolean visionButton = disagreeButton.isDisplayed();
         return visionButton;
